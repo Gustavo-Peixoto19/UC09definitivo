@@ -28,6 +28,12 @@
    RESULTADO ESPERADO: 🚌 675P na plataforma! */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+let chegou = true
+
+if (chegou) {
+   console.log("🚌 675P na plataforma!")
+}
+
 
 /* ═══ EXERCÍCIO 2 — 🎂 Entra ou não entra? ═══
    CONTEXTO: portaria do rolê 18+.
@@ -36,6 +42,14 @@
    DICA: o else é o caminho de "todo o resto".
    RESULTADO ESPERADO: Hoje não, campeão */
 // ✍️ SOLUÇÃO DA DUPLA:
+
+let idade = 17
+
+if (idade >= 18){
+   console.log("Pode entrar")
+} else {
+   console.log("Hoje não, campeão")
+}
 
 
 /* ═══ EXERCÍCIO 3 — 🎓 Aprovado, recuperação ou reprovado? ═══
@@ -51,6 +65,16 @@
    RESULTADO ESPERADO: Recuperação 📚 */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+let nota = 5
+
+if (nota >=7){
+   console.log("Aprovado 😎")
+} else if (nota >= 5) {
+   console.log("Recuperação 🥺")
+} else {
+   console.log("Reprovado ☠️")
+}
+
 
 /* ═══ EXERCÍCIO 4 — 🍨 Quem paga o açaí? ═══
    CONTEXTO: par ou ímpar para decidir quem paga o açaí depois
@@ -61,6 +85,13 @@
    RESULTADO ESPERADO: ÍMPAR — perdeu, paga o açaí 🍨 */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+let numero = 7
+
+if (numero % 2 === 0) {
+   console.log("PAR - você venceu!")
+} else {
+   console.log("ÍMPAR — perdeu, paga o açaí 🍨")
+}
 
 /* ═══ EXERCÍCIO 5 — 📅 Promoção do dia (switch) ═══
    CONTEXTO: a lanchonete do Largo 13 tem promoção por dia:
@@ -76,6 +107,24 @@
    RESULTADO ESPERADO: caldo de cana em dobro */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+let diaSemana = "quarta";
+
+switch (diaSemana) {
+   case "segunda":
+      console.log("pastel R$ 5");
+      break;
+   
+   case "quarta":
+      console.log("caldo de cana em dobro");
+      break;
+   
+   case "sexta":
+      console.log("combo R$ 15");
+      break;
+      
+   default:
+      console.log("Sem promoção hoje 😢");   
+}
 
 /* ═══ EXERCÍCIO 6 — 🎫 Meia ou inteira? (ternário) ═══
    CONTEXTO: cinema no Shopping. Estudante paga meia.
@@ -85,6 +134,9 @@
    RESULTADO ESPERADO: Meia: R$ 15 */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+let estudante = true 
+
+console.log(estudante ? "Meia: R$15" : "inteira: R$ 30");
 
 /* ═══ EXERCÍCIO 7 — 🪪 Balada: RG *E* 18+ ═══
    CONTEXTO: na porta da balada conferem as DUAS coisas.
@@ -95,6 +147,15 @@
    RESULTADO ESPERADO: Barrado no baile */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+let idadeBalada = 19
+let temRG = false
+
+if (idadeBalada >= 18 && temRG) {
+   console.log("Entrou! 😶‍🌫️")
+} else {
+   console.log("Barrado no baile")
+}
+
 
 /* ═══ EXERCÍCIO 8 — 💸 Desconto: estudante OU aniversariante ═══
    CONTEXTO: a pizzaria dá 20% se você é estudante OU se é seu
@@ -103,6 +164,15 @@
    mostre "Tem desconto!" ou "Preço cheio" usando ||.
    RESULTADO ESPERADO: Tem desconto! */
 // ✍️ SOLUÇÃO DA DUPLA:
+
+let ehEstudante = false 
+let ehAniversario = true 
+
+if (ehEstudante || ehAniversario) {
+   console.log("tem desconto!")
+} else {
+   console.log("Preço cheio")
+}
 
 
 /* ═══ EXERCÍCIO 9 — 🛡️ Campo vazio não passa ═══
@@ -113,6 +183,14 @@
    RESULTADO ESPERADO: ⚠️ Preencha o nome! */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+let nomeDigitado = ("")
+
+if (nomeDigitado === "") {
+   console.log("Preencha o nome!")
+} else {
+   console.log("Cadastro OK")
+}
+
 
 /* ═══ EXERCÍCIO 10 — 🛡️ Número que não é número ═══
    CONTEXTO: alguém digitou "abc" no valor da recarga do bilhete 🚌.
@@ -121,6 +199,15 @@
    DICA: isNaN(x) devolve true quando x é NaN.
    RESULTADO ESPERADO: ⚠️ Valor inválido */
 // ✍️ SOLUÇÃO DA DUPLA:
+
+let valor = Number("abc");
+
+if (isNaN(valor)) {
+   console.log("⚠️ Valor inválido")
+} else {
+   console.log(valor);
+}
+
 
 
 /* ═══ EXERCÍCIO 11 — 🏧 O caixa eletrônico desconfiado ═══
@@ -138,6 +225,16 @@
    RESULTADO ESPERADO (com 35): Só notas de 10! */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+let saldoConta = 100;
+let saque = 35;
+
+if (saque > saldoConta) {
+   console.log("Saldo insuficiente");
+} else if (saque % 10 !== 0) {
+   console.log("Só notas de 10!");
+} else {
+   console.log("💵 Pode sacar");
+}
 
 /* ═══ EXERCÍCIO 12 — 🔧 REFATORE este código feio ═══
    CONTEXTO: um colega escreveu isto (funciona, mas está horrível):
@@ -157,6 +254,19 @@
    RESULTADO ESPERADO: Prata */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+let pontos = 85;
+
+if (pontos >= 90) {
+   console.log("Ouro");
+} else if (pontos >= 70) {
+   console.log("Prata");
+} else if (pontos >= 50) {
+   console.log("Bronze"); 
+} else {
+   console.log("Sem medalha");
+}
+
+
 
 /* ═══ EXERCÍCIO 13 — 🍕 Guard clause: pare cedo ═══
    CONTEXTO: dividir a pizza da vitória entre 0 pessoas quebra a
@@ -172,6 +282,9 @@
 function dividirPizza(valor, pessoas) {
   // ✍️ SOLUÇÃO DA DUPLA (a guard clause vem AQUI):
 
+if (pessoas <=0 ){
+   return "⚠️ Precisa de pelo menos 1 pessoa!"
+}
   return "Cada um paga R$ " + (valor / pessoas);
 }
 console.log(dividirPizza(60, 0)); // ⚠️ Precisa de pelo menos 1 pessoa!
@@ -188,6 +301,15 @@ console.log(dividirPizza(60, 4)); // Cada um paga R$ 15
    RESULTADO ESPERADO: Corrida: R$ 26.1 */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+let km = 12;
+
+let total = 5 + (km * 2);
+
+if (km >=10) {
+   total = total * 0.9;
+}
+
+console.log("Corrida: R$ " + total)
 
 /* ═══ EXERCÍCIO 15 — 🏆 DESAFIO DA DUPLA: posso pedir pizza? ═══
    CONTEXTO: sexta à noite, jogo do Brasil 🇧🇷. Você pede pizza SE:
@@ -206,7 +328,15 @@ console.log(dividirPizza(60, 4)); // Cada um paga R$ 15
    RESULTADO ESPERADO: 🍕 PEDE A PIZZA! */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+let grana = 60;
+let fimDeSemana = false;
+let brasilJoga = true;
 
+if (grana >= 50 && (fimDeSemana || brasilJoga)) {
+    console.log("🍕 PEDE A PIZZA!");
+} else {
+    console.log("Miojo hoje 🍜");
+}
 
 /* ============================================================
    ✅ CHECKLIST FINAL DA DUPLA

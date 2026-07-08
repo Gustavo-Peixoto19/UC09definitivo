@@ -264,6 +264,12 @@ document.getElementById("btn").addEventListener("click", aoClicar);
    RESULTADO ESPERADO: Cada um paga: R$ 18 */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+let pizza = Number(60);
+let refri = Number(12);
+let rachado = (pizza + refri) / 4
+
+console.log("A quantidade que ele vão ter que dividir é de " + rachado)
+document.getElementById("saida").textContent = "A quantidade que eles vão ter que dividir é de " + rachado
 
 
 /* ============================================================

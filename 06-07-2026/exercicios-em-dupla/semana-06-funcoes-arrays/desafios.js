@@ -30,6 +30,14 @@
 // ✍️ SOLUÇÃO DA DUPLA:
 
 
+function vinheta() {
+    console.log("📻 Você ouve a Rádio Largo 13!");
+}
+
+vinheta();
+vinheta();
+vinheta();
+
 /* ═══ EXERCÍCIO 2 — 🎤 Chamando a galera pelo nome ═══
    CONTEXTO: o MC do rolê chama cada um pelo nome.
    TAREFA: crie 'chamar(nome)' que mostra "🎤 Sobe aí, <nome>!"
@@ -38,6 +46,12 @@
    RESULTADO ESPERADO: 🎤 Sobe aí, Duda! / 🎤 Sobe aí, João! */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+function chamar(nome) {
+    console.log("🎤 Sobe aí, " + nome + "!");
+}
+
+chamar("Duda");
+chamar("João");
 
 /* ═══ EXERCÍCIO 3 — 💵 O dobro do cachê ═══
    CONTEXTO: seu primeiro freela de site pagou X; o segundo
@@ -49,6 +63,13 @@
    RESULTADO ESPERADO: 300 */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+function dobro(valor) {
+    return valor * 2;
+}
+
+let cacheSegundoCliente = dobro(150);
+
+console.log(cacheSegundoCliente);
 
 /* ═══ EXERCÍCIO 4 — 🍕 Rachando a conta (2 parâmetros) ═══
    CONTEXTO: pizza + refri, dividido entre a galera.
@@ -56,6 +77,12 @@
    Mostre rachar(72, 4).
    RESULTADO ESPERADO: 18 */
 // ✍️ SOLUÇÃO DA DUPLA:
+
+function rachar(valorTotal, pessoas) {
+    return valorTotal / pessoas;
+}
+
+console.log(rachar(72, 4));
 
 
 /* ═══ EXERCÍCIO 5 — 🏹 A versão arrow ═══
@@ -68,6 +95,11 @@
    RESULTADO ESPERADO: 42 */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+const triplo = (valor) => valor * 3;
+
+let v = triplo(5)
+
+console.log(v)
 
 /* ═══ EXERCÍCIO 6 — 👋 Parâmetro padrão ═══
    CONTEXTO: o sistema de cadastro saúda o usuário — e quando

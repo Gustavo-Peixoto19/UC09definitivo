@@ -110,6 +110,13 @@ console.log(v)
    Bem-vindo(a), visitante! / Bem-vindo(a), Rebeca! */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+function saudar(nome= "visitante") {
+   console.log("Bem-vindo(a) " + nome + "!");
+}
+
+saudar();
+
+saudar("Rebeca");
 
 /* ═══ EXERCÍCIO 7 — 🔭 Escopo: onde a variável vive ═══
    CONTEXTO: clássico de entrevista técnica!
@@ -132,6 +139,7 @@ function calcularCache() {
 calcularCache();
 // console.log("fora: " + cache);   // <- descomente, veja, comente
 
+// Previsão da dupla: A linha do "dentro" + cache vai mostrar normal mas a linha de fora não vai funcionar 
 
 /* ═══ EXERCÍCIO 8 — 🗳️ Pode votar? ═══
    CONTEXTO: título de eleitor sai aos 16; voto obrigatório aos 18.
@@ -146,6 +154,19 @@ calcularCache();
    RESULTADO ESPERADO: Ainda não vota / Voto opcional / Voto obrigatório */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+function situacaoVoto(idade) {
+   if (idade >= 18) {
+      return "Voto obrigatório"
+   } else if (idade >= 16) {
+      return "Voto opcional"
+   } else {
+      return "Ainda não vota"
+   }
+} 
+
+console.log(situacaoVoto(15))
+console.log(situacaoVoto(17))
+console.log(situacaoVoto(20))
 
 /* ═══ EXERCÍCIO 9 — 📋 O corre da semana (array básico) ═══
    CONTEXTO: sua agenda da semana num array.
@@ -156,6 +177,14 @@ calcularCache();
    RESULTADO ESPERADO: aula / freela / 4 */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+let corre = ["aula", "estágio", "academia", "freela"];
+
+let primeiro = corre [0];
+let ultimo = corre[corre.length - 1];
+
+let corresSemana = [corre.length]
+
+console.log(primeiro + "/" + ultimo + "/" + corresSemana)
 
 /* ═══ EXERCÍCIO 10 — 🛒 A lista da feira (push/pop) ═══
    CONTEXTO: feira de domingo em Santo Amaro.
@@ -165,6 +194,13 @@ calcularCache();
    RESULTADO ESPERADO: ["banana", "tomate", "pastel"] */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+let lista = ["banana", "tomate"];
+
+lista.push ("pastel", "caldo de cana");
+
+lista.pop()
+
+console.log(lista)
 
 /* ═══ EXERCÍCIO 11 — 🔍 Tem pastel? (includes) ═══
    CONTEXTO: conferindo a lista antes de sair de casa.
@@ -173,6 +209,9 @@ calcularCache();
    EXEMPLO (molde):  lista.includes("item")  → true/false
    RESULTADO ESPERADO: true / false */
 // ✍️ SOLUÇÃO DA DUPLA:
+
+console.log(lista.includes("pastel"));
+console.log(lista.includes("picanha"));
 
 
 /* ═══ EXERCÍCIO 12 — 🧮 Função que soma lista ═══
@@ -191,6 +230,21 @@ calcularCache();
 // ✍️ SOLUÇÃO DA DUPLA:
 
 
+function somarLista(numeros) {
+    let total = 0; 
+
+    for (let i = 0; i < numeros.length; i++) {
+        total = total + numeros[i]; 
+    }
+
+    return total; 
+}
+
+console.log(somarLista([10, 20, 30]));
+
+console.log(somarLista([8.8, 15, 12])); 8
+
+
 /* ═══ EXERCÍCIO 13 — 🎓 Contando aprovados ═══
    CONTEXTO: as notas da turma saíram: */
 let notasTurma = [8, 4, 7, 9, 5, 10];
@@ -204,6 +258,18 @@ let notasTurma = [8, 4, 7, 9, 5, 10];
    RESULTADO ESPERADO: 4 */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+/* ═══ EXERCÍCIO 13 — 🎓 Contando aprovados ═══ */
+
+function contarAprovados(notas) {
+    let aprovados = 0; 
+    for (let i = 0; i < notas.length; i++) {
+      if (notas[i] >= 7) {
+         aprovados++;
+      }
+    }
+    return aprovados; 
+}
+console.log(contarAprovados(notasTurma));
 
 /* ═══ EXERCÍCIO 14 — 📣 Função + for...of ═══
    CONTEXTO: o professor faz a chamada da TI116.
@@ -213,6 +279,12 @@ let notasTurma = [8, 4, 7, 9, 5, 10];
    RESULTADO ESPERADO: 3 linhas de presença */
 // ✍️ SOLUÇÃO DA DUPLA:
 
+function fazerChamada(lista) {
+   for (let nome of lista) {
+      console.log("✅ " + nome + " presente!");
+   }
+}
+fazerChamada(["Duda", "Rebeca", "Vitor"]);
 
 /* ═══ EXERCÍCIO 15 — 🏆 DESAFIO DA DUPLA: o caixa completo ═══
    CONTEXTO: fim do expediente na lanchonete. As vendas: */
@@ -232,6 +304,26 @@ let vendasDia = [35, 80, 12, 95, 47];
    função reutilizável. Teste também com outro array!
    RESULTADO ESPERADO: Caixa: R$ 269 | Maior venda: R$ 95 */
 // ✍️ SOLUÇÃO DA DUPLA:
+
+
+function fecharCaixa(vendas) {
+    let total = 0;
+    let maior = vendas[0]; 
+    
+    for (let i = 0; i < vendas.length; i++) {
+      total = total + vendas[i];
+        
+        if (vendas[i] > maior) {
+         maior = vendas[i];
+      }
+    }
+    return "Caixa: R$ " + total + " | Maior venda: R$ " + maior;
+}
+let relatorioHoje = fecharCaixa(vendasDia);
+console.log(relatorioHoje);
+
+let vendasAmanha = [10, 50, 120, 30];
+console.log(fecharCaixa(vendasAmanha));
 
 
 
